@@ -2,14 +2,14 @@ body, html {
 	/* this controls universal elements on your site. Everything in here can be overridden by styles below. */
   height: 100%;
   margin: 0;
-  font-family: Verdana, Helvetica, Arial, san-serif;
-  background-color: white;
+  font-family: Helvetica, Arial, Verdana, san-serif;
+  background-color: rgb(250, 243, 219);
 }
 
 .hero-image {
     /* - HERO -
     This code controls your "hero image." You will need to change hero.jpg to match your asset */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cats.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -32,12 +32,50 @@ body, html {
 .hero-text h2 {
     /* This section adds the text stylings for your hero block */
     display: block;
-    font-size: 0.67em;
+    font-size: 0.8em;
     margin-block-start: 2.33em;
     margin-block-end: 2.33em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+  }
+
+.hero-text h3 {
+    display: block;
+    font-size: 0.5em;
+    margin-top: auto;
+    font-weight: bold;
+    white-space: nowrap;
+    position: fixed;
+    color: transparent;
+    top: 90%;
+    left: 75%;
+    transform: translate(-90%, -75%);
+  }
+
+.hero-text h3::before {
+    content: "and many other things that intrigue me.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    border-right: 1px solid white;
+    animation: typing 5s steps(31) infinite;
+  }
+
+  @keyframes typing{
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
   }
 
 .textblock {
@@ -87,14 +125,14 @@ body, html {
 /* Change your button colors and other attributes here. */
 .buttonbox {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    height: 200px;
+    height: 100px;
     border: 0px solid #;
 }
 
 .button {
-    background-color: #2A5DB0;
+    background-color: #e27822;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -105,7 +143,7 @@ body, html {
 }
 
 .button:hover {
-    background-color: #4682B4;
+    background-color: #0887f0;
 }
 
 /* Change unordered list from disc (default) to circle, square, or none. */
@@ -170,7 +208,7 @@ This code controls that cool parallax image and scrolling effect. Change the ima
 
 
 .parallax {
-    background-image: url("cats.png");
+    background-image: url("pitt.jpg");
 
     /* Set a specific height */
     height: 500px;
